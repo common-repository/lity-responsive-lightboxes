@@ -1,0 +1,116 @@
+img[data-lity]:hover {
+  cursor: pointer;
+}
+
+.lity-content.lity-image-info {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.lity-content.lity-image-info img {
+  width: 70%;
+}
+
+.lity-info {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-align: center;
+  align-items: center;
+  background: #4c4c4c63;
+  display: inline-flex;
+  height: inherit;
+  padding: 3em 2em;
+  vertical-align: middle;
+}
+
+.lity-info p:last-child {
+  margin-bottom: 0;
+}
+
+.lity-content.lity-image-info .lity-info {
+  width: 30%;
+}
+
+.lity-lightbox-background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: 0;
+  filter: blur(25px) saturate(175%) brightness(90%);
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: -5em;
+}
+
+.lity-content::after {
+  box-shadow: none;
+}
+
+.lity-info > * {
+  color: #fafafa;
+  width: 100%;
+  word-break: break-all;
+}
+
+.lity-info > h4 {
+  margin-top: 0;
+  text-decoration: underline;
+}
+
+.lity-close {
+  top: 15px;
+  right: 10px;
+}
+
+.lity-close:active {
+  top: 15px;
+  margin-top: 3px;
+}
+
+body.logged-in .lity-close {
+  top: 35px;
+  right: 10px;
+}
+
+a.lity-a11y-link:focus > img {
+  outline: 2px solid;
+  outline-color: inherit;
+}
+
+@media screen and (max-width: 850px) {
+  .lity-content.lity-image-info {
+    flex-direction: column;
+    height: 100vh;
+    margin: 0 auto;
+    width: 95%;
+  }
+
+  .lity-info {
+    padding: 2em;
+  }
+
+  .lity-image img {
+    margin: 0 auto;
+    width: 95%;
+  }
+
+  .lity-content.lity-image-info img {
+    width: 100%;
+  }
+
+  .lity-content.lity-image-info .lity-info {
+    height: auto;
+    width: 100%;
+  }
+
+  body.logged-in .lity-close {
+    right: 10px;
+    top: 55px;
+  }
+}
